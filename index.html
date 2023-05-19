@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+    <head>
+        <title>Meta Change Capital</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <link href="./src/styles.css" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    </head>
+
+
+    <body class="font-regular">
+      <nav class="w-full bg-white px-4 py-2 lg:py-6 lg:px-12 max-w-screen fixed z-20 inset-x-0 top-0 flex justify-between items-center font-headlines font-semibold">
+        <a href="#"><img src="./src/img/hlogo.png" class="w-1/2 z-30" /></a>
+
+        <button id="mobileMenuButton" class="p-3 focus:outline-none lg:hidden z-30" title="Open side menu">
+            <svg id="mobileMenuButtonClose" class="w-6 h-10 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="black">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            <svg id="mobileMenuButtonOpen" class="w-6 h-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="black">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+        <div id="sideMenuHideOnMobile" class="bg-white z-10 flex h-screen absolute top-0 right-0 transition-all duration-500 transform translate-x-0
+                                              w-full lg:hidden
+                                              flex-col justify-start items-center
+                                              -translate-y-full lg:translate-y-0">
+            
+                <a href="#" class="navlink  py-8">
+                <p class="text-center 
+                text-base text-black relative before:absolute before:block before:w-full before:h-[2px] 
+                before:bottom-0 before:left-0 before:bg-black
+                before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                before:transition before:ease-in-out before:duration-300  uppercase">home</p></a>
+                <a href="#about-us" class="navlink py-8">
+                <p class="text-center 
+                text-base text-black relative before:absolute before:block before:w-full before:h-[2px] 
+                before:bottom-0 before:left-0 before:bg-black
+                before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                before:transition before:ease-in-out before:duration-300  uppercase">about us</p></a>
+                <a href="#funding" class="navlink py-8">
+                <p class="text-center 
+                text-base text-black relative before:absolute before:block before:w-full before:h-[2px] 
+                before:bottom-0 before:left-0 before:bg-black
+                before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                before:transition before:ease-in-out before:duration-300  uppercase">get funded</p></a>
+                <a href="#contact" class="navlink py-8">
+                <p class="text-center 
+                text-base text-black relative before:absolute before:block before:w-full before:h-[2px] 
+                before:bottom-0 before:left-0 before:bg-black
+                before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                before:transition before:ease-in-out before:duration-300  uppercase">contact</p></a>
+        </div>
+
+        <div  class="bg-transparent hidden lg:flex absolute top-0 right-0
+                    lg:w-auto
+                    lg:h-auto
+                    lg:py-8
+                    px-6
+                    justify-between items-baseline
+                    lg:flex-row">
+            <a href="#" class="px-4">
+            <p class="text-center 
+            text-base text-black relative before:absolute before:block before:w-full before:h-[2px] 
+            before:bottom-0 before:left-0 before:bg-black
+            before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+            before:transition before:ease-in-out before:duration-300  uppercase">home</p></a>
+            <a href="#about-us" class="px-4">
+            <p class="text-center 
+            text-base text-black uppercase relative before:absolute before:block before:w-full before:h-[2px] 
+            before:bottom-0 before:left-0 before:bg-black
+            before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+            before:transition before:ease-in-out before:duration-300">about us</p></a>
+            <a href="#funding" class="px-4">
+            <p class="text-center 
+            text-base text-black relative before:absolute before:block before:w-full before:h-[2px] 
+            before:bottom-0 before:left-0 before:bg-black
+            before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+            before:transition before:ease-in-out before:duration-300  uppercase">get funded</p></a>
+            <a href="#contact" class="px-4" >
+            <p class="text-center 
+            text-base text-black relative before:absolute before:block before:w-full before:h-[2px] 
+            before:bottom-0 before:left-0 before:bg-black
+            before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+            before:transition before:ease-in-out before:duration-300  uppercase">contact</p></a>
+        </div>
+      </nav>
+
+      <section class="bg-no-repeat bg-cover bg-top py-24 px-4 lg:px-12" style="background-image: url(./src/img/hero1.png)">
+        <div class="w-full lg:px-20 pt-20">
+            <h1 class="tex-left font-headlines text-lg lg:text-2xl text-yellow font-semibold">Investments that change the narrative</h1>
+            <p class="text-left text-black text-sm lg:text-md font-semibold">A block chain focused early stage investment fund</p>
+        </div>
+      </section>
+      
+      <section class="px-12 pb-24 bg-black relative">
+        <img src="./src/img/strelka.png" class="absolute left-0 top-20 w-1/4 lg:w-1/12" />
+        <h1 class="text-left text-white font-headlines text-md lg:text-lg pl-20 pt-12 lg:pt-16 lg:px-52 lg:w-1/2">Building the CEE region
+            as the next web3 hub</h1>
+        <div class="flex flex-col lg:flex-row justify-around items-start pt-12">
+            <div class="flex flex-col justify-around items-start pt-20">
+                <img src="./src/img/ikonica.png" />
+                <p class="text-white text-base text-left py-8">Blockchain & AI
+                    experience</p>
+                <p class="text-yellow text-sm text-left lg:w-80">Proven experience in building, scaling and exiting specific companies in Layer1 and Layer2 technologies</p>
+            </div>
+            <div class="flex flex-col justify-around items-start pt-20">
+                <img src="./src/img/ikonica.png" />
+                <p class="text-white text-base text-left py-8">Proven track
+                    record</p>
+                <p class="text-yellow text-sm text-left lg:w-80">Collaborated on and scale multiple blockchain companies. The fund's partners have worked together as a team for a total of 8 years and reviewed over 1000 teams in process.
+                </p>
+            </div>
+            <div class="flex flex-col justify-around items-start pt-20">
+                <img src="./src/img/ikonica.png" />
+                <p class="text-white text-base text-left py-8">Proprietary
+                    deal flow</p>
+                <p class="text-yellow text-sm text-left lg:w-80">Access to founders in european cutting edge technology companieas. continuosly leveraging the ecosystems that we have built.1000 teams in process.</p>
+            </div>
+            <div class="flex flex-col justify-around items-start pt-20">
+                <img src="./src/img/ikonica.png" />
+                <p class="text-white text-base text-left py-8">Hands on
+                    approach</p>
+                <p class="text-yellow text-sm text-left lg:w-80">We are former operators who fundamentally understand the challanges and know how to overcome them.</p>
+            </div>
+        </div>
+      </section>
+
+      <section id="about-us" class="px-12 py-24 bg-white relative">
+        <img src="./src/img/strelkacrna.png" class="absolute left-0 top-28 w-1/4 lg:w-1/12" />
+        <h1 class="text-left text-yellow font-headlines text-md lg:text-lg pl-20 lg:pl-52">About the company</h1>
+        <div class="flex flex-col justify-around items-start px-4 pt-12 lg:px-72">
+            <p class="font-headlines text-black text-left text-md lg:text-lg">Long standing partnership</p>
+            <p class="text-left text-black text-sm pt-6 lg:w-2/3">The partners at MCC have been on both sides of the process - as investors and as enterpreneurs. We have invested successfully in startup operations in classical tech and recently in blockchain tech. </br>
+                We have a deep understanding of the enterpreneurial process, its drivers, problems ant its upsides. We have been building startups using new and disruptive technologies. We understand obstacles founders face and we know how to mitigate them. </p> 
+        </div>
+      </section>
+
+      <section class="px-12 pb-24 bg-black relative">
+        <div class="flex flex-col lg:flex-row justify-around items-start pt-8">
+            <div class="flex flex-col justify-around items-start pt-20">
+                <img src="./src/img/nikola.png" />
+                <p class="text-yellow text-base text-left pt-8 pb-4">Nikola Stojanow</p>
+                <p class="text-white text-base text-left pb-8">Partner</p>
+
+                <p class="text-white text-sm text-left lg:w-80">
+                    Directly responsible for scaling a major blockchain protocol to $1b in market value in 3 years. </br></br>
+                    Serial Startup Founder </br></br>
+                    Extensive corporate BizDev experienve in SE Asia, MENA and Europe.
+                </p>
+            </div>
+            <div class="flex flex-col justify-around items-start pt-20">
+                <img src="./src/img/luka.png" />
+                <p class="text-yellow text-base text-left pt-8 pb-4">Luka Sucic</p>
+                <p class="text-white text-base text-left pb-8">Partner</p>
+
+                <p class="text-white text-sm text-left lg:w-80">
+                    Serial Startup Founder </br></br>
+                    Ex-Starfleet Accelerator </br></br>
+                    Ex-Deutsche Telekom </br></br>
+                    hub:raum Accelerator in CEE (13 countries) </br></br>
+                    600+ startups accelerated </br></br>
+                    Ecosystem builder
+                </p>
+            </div>
+            <div class="flex flex-col justify-around items-start pt-20">
+                <img src="./src/img/lukac.png" />
+                <p class="text-yellow text-base text-left pt-8 pb-4">Luka Ciganek</p>
+                <p class="text-white text-base text-left pb-8">Partner</p>
+
+                <p class="text-white text-sm text-left lg:w-80">
+                    Serial Startup Founder </br></br>
+                    C-level executive at publicly traded company </br></br>
+                    Built teams across four continents </br></br>
+                    Exit on Australian Stock Exchange </br></br>
+                    YTILI Alumni
+                </p>
+            </div>
+            <div class="flex flex-col justify-around items-start pt-20">
+                <img src="./src/img/stojan.png" />
+                <p class="text-yellow text-base text-left pt-8 pb-4">Stojan Nedin</p>
+                <p class="text-white text-base text-left pb-8">Partner</p>
+
+                <p class="text-white text-sm text-left lg:w-80">
+                    Serial Enterpreneur </br></br>
+                    Innovation and Technology Expert </br></br>
+                    Investment professional </br></br>
+                    Ecosystem builder
+                </p>
+            </div>
+        </div>
+      </section>
+
+      <section class="px-12 py-24 bg-white relative">
+        <p class="font-headlines text-black text-center text-md lg:text-lg">A strong enterpreneurial background</p>
+        <div class="flex flex-col lg:flex-row text-left text-black pt-20">
+            <p class="px-2 lg:px-12">The fund's partners have worked together as a team for a total of 8 years, reviewed together <strong>1000+ companies</strong> and invested together in 19 companies through <strong>AE ventures</strong> and <strong>Starfleet</strong> and 45 companies trough</br>
+                The team has extensive experience working together on multiple projects. <strong>Luka Sucic</strong> and <strong>Luka Ciganek</strong>, both Croatian natives, have been working together on Luka Ciganek's former company <strong>Gaming Battlegrounds</strong>, since formation of the company in 2014. They developed an extensive relationship trough this time that culminated in working together as colleagues at the end of 2018 in <strong>AE Ventures</strong>, investing in early-stage blockchain companies, together with <strong>Nikola Stojanow</strong>.</p>
+            <p class="px-2 lg:px-12"><strong>Nikola Stoyanow</strong> and <strong>Luka Sucic</strong> started working together in early 2018 when Nikola recruited Luka Sucic to structure the operations of the <strong>Venture arm, the Accelerator</strong>, and business development arm of a global blokchain startup - <strong>Aeternity</strong>. <strong>Luka Sucic</strong> brought in <strong>Luka Ciganek</strong> to help with the accelerator at the end of 2018.</br>
+                <strong>Nikola</strong> and <strong>Stoyan</strong> first cooperated on blockchain projects in 2017 and started intensive work together in 2018 and 2019 on multiple projects within the <strong>aeternity ecosystem</strong>, most notably software and project development. Nikola and Stoyan are working together in <strong>Vitosha Venture Partners</strong> where they support the Bulgarian startup ecosystem and have made <strong>45 deals</strong> together.</p>
+        </div>
+      </section>
+
+      <section id="funding" class="px-12 py-24 bg-white relative">
+        <img src="./src/img/strelkacrna.png" class="absolute left-0 top-28 w-1/4 lg:w-1/12" />
+        <h1 class="text-left text-yellow font-headlines text-md lg:text-lg pl-20 lg:pl-52">How to get funded</h1>
+        <div class="flex flex-col justify-around items-start px-4 pt-12 lg:px-72">
+            <p class="font-headlines text-black text-left text-md lg:text-lg">Investment criteria</p>
+            <p class="text-left text-black text-sm pt-6 lg:w-2/3">Team members have operated accelerators and programs specifically targeted at 13 CEE countries (hub:raum WARP, Telekom Innovation Challenge, Challenge UP), such as Starfleet with a strong emphasis on Eastern Europe and Vitosha Venture Partners in Bulgaria. Moreover, we have operated startups in Poland, Croatia and Bulgaria in the past. </p> 
+        </div>
+        <div class="flex flex-col lg:flex-row justify-around items-start pt-12">
+            <div class="flex flex-col justify-around items-start pt-20">
+                <img src="./src/img/ikonica.png" />
+                <p class="text-yellow text-base text-left py-8">Stage
+                    experience</p>
+                <p class="text-black text-sm text-left lg:w-80">We invest in seed and post seed stage companies.</p>
+            </div>
+            <div class="flex flex-col justify-around items-start pt-20">
+                <img src="./src/img/ikonica.png" />
+                <p class="text-yellow text-base text-left py-8">Geofocus</p>
+                <p class="text-black text-sm text-left lg:w-80">Our main focus is Central and East Europe.
+                </p>
+            </div>
+            <div class="flex flex-col justify-around items-start pt-20">
+                <img src="./src/img/ikonica.png" />
+                <p class="text-yellow text-base text-left py-8">Math</p>
+                <p class="text-black text-sm text-left lg:w-80">Potential for 10x return, mminority interests, management representation, unique product or bussiness model, differentionated, protectable.</p>
+            </div>
+            <div class="flex flex-col justify-around items-start pt-20">
+                <img src="./src/img/ikonica.png" />
+                <p class="text-yellow text-base text-left py-8">Sectors</p>
+                <p class="text-black text-sm text-left lg:w-80">We invest in advanced technologies in fintech, blockchain, machine learning, artificial intelligence sectors.</p>
+            </div>
+        </div>
+        <div class="flex flex-col justify-around items-start px-4 pt-32 lg:px-72">
+            <p class="font-headlines text-black text-left text-md lg:text-lg">Defined procedures</p>
+            <p class="text-left text-black text-sm pt-6 lg:w-2/3">These are Constructed steps from sourcing to an exit.</p> 
+        </div>
+        <div class="flex flex-row flex-wrap lg:flex-nowrap justify-around items-start pt-12">
+            <div class="flex flex-row justify-start items-start pt-6">
+                <div class="bg-no-repeat bg-contain w-28 py-4 lg:w-44" style="background-image: url(./src/img/punastrelka.png)" >
+                    <p class="text-left font-semibold text-xs lg:text-sm">Source</p>
+                    <p class="text-left text-xs lg:text-sm"></p>
+                    <ul class="text-xs lg:text-sm text-black pl-2">
+                        <li class="pt-8">Partner networks</li>
+                        <li class="pt-4">Events & initiatives</li>
+                        <li class="pt-4">Advisory board
+                            & networks</li>
+                        <li class="pt-4">Other VCS</li>
+                        <li class="pt-4">Forums & events</li>
+                        <li class="pt-4">Inbound</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col justify-start items-start pt-6">
+                <div class="flex flex-row justify-around items-start">
+                    <div class="bg-no-repeat bg-contain w-28 py-4 lg:w-44" style="background-image: url(./src/img/punastrelka.png)" >
+                        <p class="text-left font-semibold text-xs lg:text-sm">1st Gate</p>
+                        <p class="text-left text-xs lg:text-sm"></p></div>
+                        <div class="bg-no-repeat bg-contain w-28 py-4 lg:w-44 ml-2" style="background-image: url(./src/img/punastrelka.png)" >
+                        <p class="text-left font-semibold text-xs lg:text-sm">Screen</p>
+                        <p class="text-left text-xs lg:text-sm"></p></div>
+                </div>
+                <div class="flex flex-row justify-around items-start">
+                   <img src="./src/img/treshold.png" class="h-48 lg:h-72" />
+                   <ul class="text-xs lg:text-sm text-black pl-8">
+                    <li class="pt-8">Investment intake</li>
+                    <li class="pt-4">Screen - quick review</li>
+                    <li class="pt-4">Weekly shortlist</li>
+                    <li class="pt-4">Case allocation</li>
+                    <li class="pt-4">Forums & events</li>
+                    <li class="pt-4">Team brief</li>
+                </ul>
+                </div>
+            </div>
+            <div class="flex flex-col justify-between items-start pt-6">
+                <div class="flex flex-row justify-around items-start">
+                    <div class="bg-no-repeat bg-contain w-28 lg:w-44 py-4" style="background-image: url(./src/img/punastrelka.png)" >
+                        <p class="text-left font-semibold text-xs lg:text-sm">Investment Case</p>
+                        <p class="text-left text-xs lg:text-sm"></p></div>
+                </div>
+                <div class="pt-0 mt-0 border-l h-44 lg:h-72">
+                    <ul class="text-xs lg:text-sm text-black pl-4">
+                        <li class="pt-8">High level DD</li>
+                        <li class="pt-4">Investment brief</li>
+                        <li class="pt-4">Full DD</li>
+                        <li class="pt-4">Term sheet</li>
+                        <li class="pt-4">Investment
+                            committee</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col justify-start items-start pt-6">
+                <div class="flex flex-row justify-around items-start">
+                    <div class="bg-no-repeat bg-contain w-28 py-4 lg:w-44" style="background-image: url(./src/img/punastrelka.png)" >
+                        <p class="text-left font-semibold text-xs lg:text-sm">Close</p>
+                        <p class="text-left text-xs lg:text-sm"></p></div>
+                        <div class="bg-no-repeat bg-contain w-28 py-4 lg:w-44 ml-2" style="background-image: url(./src/img/punastrelka.png)" >
+                        <p class="text-left font-semibold text-xs lg:text-sm">Post investment</p>
+                        <p class="text-left text-xs lg:text-sm"></p></div>
+                </div>
+                <div class="pt-0 mt-0 border-l h-44 lg:h-72">
+                    <ul class="text-xs lg:text-sm text-black pl-8">
+                        <li class="pt-8">IC Review</li>
+                        <li class="pt-4">IC Approval</li>
+                        <li class="pt-4">Investment docs</li>
+                        <li class="pt-4">Invest</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col justify-between items-start pt-6">
+                <div class="flex flex-row justify-around items-start">
+                    <div class="bg-no-repeat bg-contain w-28 lg:w-44 py-4 bg-yellow" >
+                        <p class="text-left font-semibold text-xs lg:text-sm">Post investment</p>
+                        <p class="text-left text-xs lg:text-sm"></p></div>
+                </div>
+                <div class="pt-0 mt-0 border-l h-44 lg:h-72">
+                    <ul class="text-xs lg:text-sm text-black pl-4">
+                        <li class="pt-8">Plan with
+                            co-investors</li>
+                        <li class="pt-4">Prepare exit</li>
+                        <li class="pt-4">Review offers</li>
+                        <li class="pt-4">IC Approval</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col justify-around items-start px-4 pt-32 lg:px-72">
+            <p class="font-headlines text-black text-left text-md lg:text-lg">Investment scorecard</p>
+            <p class="text-left text-black text-sm pt-6 lg:w-2/3">We emphasise on founders. Having operated startups, we understand the importance of having a great team.</p> 
+        </div>
+        <div class="pt-12 lg:flex flex-row items-start justify-around">
+            <table class="table-fixed text-xs lg:text-sm">
+                <thead class="bg-yellow">
+                    <tr>
+                        <th class="text-left px-4 py-1">Scorecard</th>
+                        <th class="text-center px-8">Early stage pts.</th>
+                        <th class="text-right px-4">Late stage pts.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b">
+                        <td class="text-left px-4 py-2">Founders / teams</td>
+                        <td class="text-right px-10">50</td>
+                        <td class="text-right px-4">40</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="text-left px-4 py-2">Fit with the fund</td>
+                        <td class="text-right px-10">15</td>
+                        <td class="text-right px-4">15</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="text-left px-4 py-2">Product / technology</td>
+                        <td class="text-right px-10">10</td>
+                        <td class="text-right px-4">10</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="text-left px-4 py-2">Business model</td>
+                        <td class="text-right px-10">5</td>
+                        <td class="text-right px-4">10</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="text-left px-4 py-2">Market</td>
+                        <td class="text-right px-10">10</td>
+                        <td class="text-right px-4">10</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="text-left px-4 py-2">Sector</td>
+                        <td class="text-right px-10">5</td>
+                        <td class="text-right px-4">5</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="text-left px-4 py-2">Ability to add value</td>
+                        <td class="text-right px-10">5</td>
+                        <td class="text-right px-4">5</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="text-left px-4 py-2">Valuation</td>
+                        <td class="text-right px-10">0</td>
+                        <td class="text-right px-4">5</td>
+                    </tr>
+                    <tr class="lg:hidden border-b">
+                        <td class="text-left px-4 py-2">Experience in the Vertical</td>
+                        <td class="text-right px-10">15</td>
+                        <td class="text-right px-4">20</td>
+                    </tr>
+                    <tr class="lg:hidden border-b">
+                        <td class="text-left px-4 py-2">Ability to execute</td>
+                        <td class="text-right px-10">10</td>
+                        <td class="text-right px-4">15</td>
+                    </tr>
+                    <tr class="lg:hidden border-b">
+                        <td class="text-left px-4 py-2">Track record</td>
+                        <td class="text-right px-10">5</td>
+                        <td class="text-right px-4">5</td>
+                    </tr>
+                    <tr class="lg:hidden border-b">
+                        <td class="text-left px-4 py-2">Worked together</td>
+                        <td class="text-right px-10">5</td>
+                        <td class="text-right px-4">5</td>
+                    </tr>
+                    <tr class="lg:hidden border-b">
+                        <td class="text-left px-4 py-2">Enterpreneurial culture</td>
+                        <td class="text-right px-10">5</td>
+                        <td class="text-right px-4">5</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table-fixed hidden lg:block">
+                <thead>
+                    <tr class="bg-yellow">
+                        <th class="text-left px-4 py-1">Scorecard</th>
+                        <th class="text-center px-8">Early stage pts.</th>
+                        <th class="text-right px-4">Late stage pts.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b">
+                        <td class="text-left px-4 py-2">Experience in the Vertical</td>
+                        <td class="text-right px-10">15</td>
+                        <td class="text-right px-4">20</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="text-left px-4 py-2">Ability to execute</td>
+                        <td class="text-right px-10">10</td>
+                        <td class="text-right px-4">15</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="text-left px-4 py-2">Track record</td>
+                        <td class="text-right px-10">5</td>
+                        <td class="text-right px-4">5</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="text-left px-4 py-2">Worked together</td>
+                        <td class="text-right px-10">5</td>
+                        <td class="text-right px-4">5</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="text-left px-4 py-2">Enterpreneurial culture</td>
+                        <td class="text-right px-10">5</td>
+                        <td class="text-right px-4">5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </section>
+
+      <section class="bg-no-repeat bg-cover bg-top pb-24 px-4 lg:px-12" style="background-image: url(./src/img/bg-yellow.png)">
+        <div class="flex flex-col justify-around items-start px-4 pt-20 lg:px-72">
+            <p class="font-headlines text-black text-left text-md lg:text-lg">Governance</p>
+            <p class="text-left text-black text-sm pt-6 lg:w-2/3">An operating structure with a two-step validation for investments under consideration by both, a technical team of experts and an independently regulated investment manager, to ensure transparency and sound rational behind each and every investment.</p> 
+        </div>
+        <div class="flex flex-row pt-12 justify-around items-center">
+            <img src="./src/img/strelkacrna.png" class="px-8">
+            <img src="./src/img/strelkacrna.png" class="px-8">
+            <img src="./src/img/strelkacrna.png" class="px-8">
+            <img src="./src/img/strelkacrna.png" class="px-8">
+            <img src="./src/img/strelkacrna.png" class="px-8">
+        </div>
+        <div class="flex flex-col lg:flex-row pt-12 justify-around items-center">
+            <p class="font-semibold font-headlines text-white text-base lg:text-md lg:w-64 text-center">
+                Weekly / monthly management meeting
+            </p>
+            <div>
+                <p class="font-semibold font-headlines text-white text-base lg:text-md pt-8">Quaterly report</p>
+                <ul class="pt-4">
+                    <li>Financial statement
+                    </li>
+                    <li>KPIs
+                    </li>
+                    <li>Network strenght
+                    </li>
+                    <li>Follow-on-funding rate
+                    </li>
+                    <li>IRR, TVPIC, DPI</li>
+                </ul>
+            </div>
+            <div>
+                <p class="font-semibold font-headlines text-white text-base lg:text-md pt-8">Anual report</p>
+                <ul class="pt-4">
+                    <li>Financial statement
+                    </li>
+                    <li>KPIs
+                    </li>
+                    <li>Network strenght
+                    </li>
+                    <li>Follow-on-funding rate
+                    </li>
+                    <li>IRR, TVPIC, DPI</li>
+                </ul>
+            </div>
+            <div>
+                <p class="font-semibold font-headlines text-white text-base lg:text-md pt-8">Valuation report</p>
+                <ul class="pt-4">
+                    <li>Financial statement
+                    </li>
+                    <li>KPIs
+                    </li>
+                    <li>Network strenght
+                    </li>
+                    <li>Follow-on-funding rate
+                    </li>
+                    <li>IRR, TVPIC, DPI</li>
+                </ul>
+            </div>
+            <div>
+                <p class="font-semibold font-headlines text-white text-base lg:text-md pt-8">Draw down report</p>
+                <ul class="pt-4">
+                    <li>Financial statement
+                    </li>
+                    <li>KPIs
+                    </li>
+                    <li>Network strenght
+                    </li>
+                    <li>Follow-on-funding rate
+                    </li>
+                    <li>IRR, TVPIC, DPI</li>
+                </ul>
+            </div>
+        </div>
+      </section>
+
+      <section id="contact" class="px-12 py-24 bg-white relative">
+        <img src="./src/img/strelkacrna.png" class="absolute left-0 top-28 w-1/4 lg:w-1/12" />
+        <h1 class="text-left text-yellow font-headlines text-md lg:text-lg pl-20 lg:pl-52">Contact</h1>
+        <div class="flex flex-col justify-around items-start px-4 pt-12 lg:px-72">
+            <p class="font-headlines text-black text-left text-md lg:text-lg">Congrats you made it this far</p>
+            <p class="text-left text-black text-sm pt-6 lg:w-2/3">We'd love to hear from you! Whether you have a question, a suggestion, or simply want to say hello, we're here to assist you. Fill out the form below to get in touch, and we'll get back to you as soon as possible.  </p> 
+        </div>
+        <form class="w-full px-4 lg:px-20 pt-20" name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="contact" value="contact">
+            <div class="flex flex-col justify-around items-center">
+            <div class="flex flex-col lg:flex-row justify-start items-center">
+                <div class="flex flex-col justify-around items-center lg:mr-10">
+                    <div class="mb-12">
+                        <label class="text-xs lg:text-sm font-thin text-black">Your full name</label>
+                        <input class="bg-form-bg
+                         w-full py-3 px-20 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+                         id="name" 
+                         type="text">
+                      </div>
+                      <div class="mb-12">
+                        <label class="text-xs lg:text-sm font-thin text-black">And you are...</label>
+                        <textarea class="bg-form-bg
+                        w-full py-3 px-20 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+                        id="message" 
+                        rows="12" >
+                        </textarea>
+                      </div>
+                      <div class="mb-12">
+                        <label class="text-xs lg:text-sm font-thin text-black">Your e-mail</label>
+                        <input class="bg-form-bg
+                        w-full py-3 px-20 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+                        id="email" 
+                        type="email">
+                      </div>
+                </div>
+                <div class="flex flex-col justify-around items-center">
+                    <div class="mb-12">
+                        <label class="text-xs lg:text-sm font-thin text-black">Your company name</label>
+                        <input class="bg-form-bg
+                         w-full py-3 px-20 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+                         id="company-name" 
+                         type="text">
+                      </div>
+                      <div class="mb-12">
+                        <label class="text-xs lg:text-sm font-thin text-black">Your company summary</label>
+                        <textarea class="bg-form-bg
+                        w-full py-3 px-20 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+                        id="summary" 
+                        rows="12" >
+                        </textarea>
+                      </div>
+                      <div class="mb-12">
+                        <label class="text-xs lg:text-sm font-thin text-black">Your company web site</label>
+                        <input class="bg-form-bg
+                        w-full py-3 px-20 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+                        id="website" 
+                        type="text">
+                      </div>
+                    </div>
+            </div>
+            <div class="mx-auto">
+                <button class="bg-yellow hover:bg-black text-black text-center py-2 px-8 text-base shadow-sm hover:text-white font-headlines font-bold uppercase" 
+                type="submit">
+                  submit
+                </button>
+            </div>  
+
+        </div>
+          </form>        
+      </section>
+
+      <footer class="w-screen bg-black px-4 py-4 lg:py-6 lg:px-12">
+        <div class="flex flex-row justify-between items-center">
+            <img src="./src/img/flogo.png" class="w-1/2 lg:w-1/6" />
+            <a href="https://www.linkedin.com/company/meta-change-capital/" target="_blank" rel="noopener noreferrer"><img src="./src/img/linkedin.png" /></a> 
+            <div class="flex flex-col justify-between items-start">
+                <a href="/src/policy.html" target="_blank" rel="noopener noreferrer" class="text-sm text-white font-headlines relative before:absolute before:block before:w-full before:h-[2px] 
+                before:bottom-0 before:left-0 before:bg-white
+                before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                before:transition before:ease-in-out before:duration-300">SDFR Policy</a>
+                <a href="#about-us" class="text-sm text-white font-headlines relative before:absolute before:block before:w-full before:h-[2px] 
+                before:bottom-0 before:left-0 before:bg-white
+                before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                before:transition before:ease-in-out before:duration-300">About us</a>
+                <a href="#funding" class="text-sm text-white font-headlines relative before:absolute before:block before:w-full before:h-[2px] 
+                before:bottom-0 before:left-0 before:bg-white
+                before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                before:transition before:ease-in-out before:duration-300">Get Funded</a>
+                <a href="#contact" class="text-sm text-white font-headlines relative before:absolute before:block before:w-full before:h-[2px] 
+                before:bottom-0 before:left-0 before:bg-white
+                before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                before:transition before:ease-in-out before:duration-300">Contact</a>
+            </div>
+        </div>
+
+      </footer>
+        
+    </body>
+    <script>
+        var mobileMenuButton = document.getElementById("mobileMenuButton");
+        mobileMenuButton.onclick = function() {
+                document.getElementById("sideMenuHideOnMobile").classList.toggle("-translate-y-full");
+                document.getElementById("sideMenuHideOnMobile").classList.toggle("mt-20");
+                document.getElementById("mobileMenuButtonClose").classList.toggle("hidden");
+                document.getElementById("mobileMenuButtonOpen").classList.toggle("hidden");
+            }
+            // Hide element when click outside nav
+        var theElementContainer = document.getElementsByTagName("nav")[0];
+        document.addEventListener('click', function(event) {
+            if (!theElementContainer.contains(event.target)) {
+                document.getElementById("sideMenuHideOnMobile").classList.add("-translate-y-full");
+                document.getElementById("sideMenuHideOnMobile").classList.remove("shadow");
+                document.getElementById("sideMenuHideOnMobile").classList.remove("hidden");
+                document.getElementById("sideMenuHideOnMobile").classList.add("mt-20");
+                document.getElementById("mobileMenuButtonClose").classList.add("hidden");
+            }
+        
+        });
+    
+        var menuLinks = document.querySelectorAll("a.navlink");
+        menuLinks.forEach((e, i) => {
+            e.addEventListener('click', () => {
+                document.getElementById("sideMenuHideOnMobile").classList.add("-translate-y-full");
+                document.getElementById("sideMenuHideOnMobile").classList.remove("shadow");
+                document.getElementById("mobileMenuButtonOpen").classList.remove("hidden");
+                document.getElementById("mobileMenuButtonClose").classList.add("hidden");
+            });
+        });
+    
+    </script>
+</html>

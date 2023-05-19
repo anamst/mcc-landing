@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+    <head>
+        <title>Meta Change Capital</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <link href="./styles.css" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    </head>
+    <body class="font-regular">
+        <nav class="w-full bg-white px-4 py-2 lg:py-6 lg:px-12 max-w-screen fixed z-20 inset-x-0 top-0 flex justify-between items-center font-headlines font-semibold">
+            <a href="../index.html"><img src="./img/hlogo.png" class="w-1/2 z-30" /></a>
+    
+            <button id="mobileMenuButton" class="p-3 focus:outline-none lg:hidden z-30" title="Open side menu">
+                <svg id="mobileMenuButtonClose" class="w-6 h-10 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="black">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                <svg id="mobileMenuButtonOpen" class="w-6 h-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="black">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+    
+            <div id="sideMenuHideOnMobile" class="bg-white z-10 flex h-screen absolute top-0 right-0 transition-all duration-500 transform translate-x-0
+                                                  w-full lg:hidden
+                                                  flex-col justify-start items-center
+                                                  -translate-y-full lg:translate-y-0">
+                
+                    <a href="../index.html" class="navlink  py-8">
+                    <p class="text-center 
+                    text-base text-black relative before:absolute before:block before:w-full before:h-[2px] 
+                    before:bottom-0 before:left-0 before:bg-black
+                    before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                    before:transition before:ease-in-out before:duration-300  uppercase">home</p></a>
+                    <a href="../index.html" class="navlink py-8">
+                    <p class="text-center 
+                    text-base text-black relative before:absolute before:block before:w-full before:h-[2px] 
+                    before:bottom-0 before:left-0 before:bg-black
+                    before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                    before:transition before:ease-in-out before:duration-300  uppercase">about us</p></a>
+                    <a href="../index.html" class="navlink py-8">
+                    <p class="text-center 
+                    text-base text-black relative before:absolute before:block before:w-full before:h-[2px] 
+                    before:bottom-0 before:left-0 before:bg-black
+                    before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                    before:transition before:ease-in-out before:duration-300  uppercase">get funded</p></a>
+                    <a href="../index.html" class="navlink py-8">
+                    <p class="text-center 
+                    text-base text-black relative before:absolute before:block before:w-full before:h-[2px] 
+                    before:bottom-0 before:left-0 before:bg-black
+                    before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                    before:transition before:ease-in-out before:duration-300  uppercase">contact</p></a>
+            </div>
+    
+            <div  class="bg-transparent hidden lg:flex absolute top-0 right-0
+                        lg:w-auto
+                        lg:h-auto
+                        lg:py-8
+                        px-6
+                        justify-between items-baseline
+                        lg:flex-row">
+                <a href="../index.html" class="px-4">
+                <p class="text-center 
+                text-base text-black relative before:absolute before:block before:w-full before:h-[2px] 
+                before:bottom-0 before:left-0 before:bg-black
+                before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                before:transition before:ease-in-out before:duration-300  uppercase">home</p></a>
+                <a href="../index.html" class="px-4">
+                <p class="text-center 
+                text-base text-black uppercase relative before:absolute before:block before:w-full before:h-[2px] 
+                before:bottom-0 before:left-0 before:bg-black
+                before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                before:transition before:ease-in-out before:duration-300">about us</p></a>
+                <a href="../index.html" class="px-4">
+                <p class="text-center 
+                text-base text-black relative before:absolute before:block before:w-full before:h-[2px] 
+                before:bottom-0 before:left-0 before:bg-black
+                before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                before:transition before:ease-in-out before:duration-300  uppercase">get funded</p></a>
+                <a href="../index.html" class="px-4" >
+                <p class="text-center 
+                text-base text-black relative before:absolute before:block before:w-full before:h-[2px] 
+                before:bottom-0 before:left-0 before:bg-black
+                before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                before:transition before:ease-in-out before:duration-300  uppercase">contact</p></a>
+            </div>
+          </nav>
+
+          <section class="bg-no-repeat bg-cover bg-top py-24 px-4 lg:px-12" style="background-image: url(./src/img/hero1.png)">
+            <div class="w-full lg:px-20 pt-20">
+                <h1 class="tex-left font-headlines text-lg lg:text-xl text-black font-bold">SFDR pre-contractual disclosures - MCC VC Fund I Coöperatief U.A. (the “Fund”)
+                </h1>
+            </div>
+            <div class="w-full lg:px-20 pt-20">
+                <p class="text-left text-black text-sm pt-6 lg:w-3/4">Meta Change B.V. (the <strong>“Fund Manager”</strong>) is a financial market participant as defined in the Sustainable Financial Disclosure Regulation (EU) 2019/2088 (the <strong>"SFDR"</strong>) amended by Regulation (EU) 2020/852 (the <strong>"Taxonomy Regulation"</strong>) as in force since March 10, 2021.</p> 
+                <p class="text-left text-black text-sm pt-6 lg:w-3/4">The Fund is a “neutral fund” because it does not promote sustainability nor has it sustainable investment as its objective.</p> 
+                <p class="text-left text-black text-sm pt-6 lg:w-3/4">SFDR distinguishes three regimes:</p> 
+                <ul class="list-decimal pl-10">
+                    <li>The neutral regime for investment funds that do not have sustainability features;
+                    </li>
+                    <li>The light green regime for investment funds that promote sustainability; and
+                    </li>
+                    <li>The dark green regime for investment funds that have sustainable investments as their objective.
+                    </li>
+                </ul>
+                <p class="text-left text-black text-sm lg:text-base pt-12">Definitions:</p> 
+                <p class="text-left text-black text-sm pt-6 lg:w-2/3">The following definitions are relevant:</p> 
+                <ul class="list-disc pl-10 w-3/4">
+                    <li class="pt-4">A <strong>"sustainable investment"</strong> is defined as an investment in an economic activity that contributes to an environmental objective, as measured, for example, by key resource efficiency indicators on the use of energy, renewable energy, raw materials, water and land, on the production of waste, and greenhouse gas emissions, or on its impact on biodiversity and the circular economy, or an investment in an economic activity that contributes to a social objective, in particular an investment that contributes to tackling inequality or that fosters social cohesion, social integration and labor relations, or an investment in human capital or economically or socially disadvantaged communities, provided that such investments do not significantly harm any of those objectives and that the investee companies follow good governance practices, in particular with respect to sound management structures, employee relations, remuneration of staff and tax compliance.</li>
+                    <li class="pt-4"><strong>"No significant harm"</strong> means that for each environmental objective, uniform criteria for determining whether economic activities contribute substantially to that objective should be laid down. One element of the uniform criteria should be to avoid significant harm to any of the environmental objectives. This is in order to avoid that investments qualify as environmentally sustainable in cases where the economic activities benefitting from those investments cause harm to the environment to an extent that outweighs their contribution to an environmental objective.</li>
+                    <li class="pt-4"><strong>"Environmental objective"</strong> means the objectives as laid down in Article 9 of the Taxonomy Regulation, being the following objectives:
+                    </li>
+                    <ul class="list-none pl-10 w-3/4">
+                        <li class="pt-2">climate change mitigation (Art. 10), the process of holding the increase in the global average temperature to well below 2 °C and pursuing efforts to limit it to 1,5 °C above pre-industrial levels, as laid down in the Paris Agreement;
+                        </li>
+                        <li class="pt-2">climate change adaptation (Art. 11), the process of adjustment to actual and expected climate change and its impacts;
+                        </li>
+                        <li class="pt-2">the sustainable use and protection of water and marine resources (Art. 12);
+                        </li>
+                        <li class="pt-2">the transition to a circular economy (Art. 13), an economic system whereby the value of products, materials and other resources in the economy is maintained for as long as possible, enhancing their efficient use in production and consumption, thereby reducing the environmental impact of their use, minimizing waste and the release of hazardous substances at all stages of their life cycle, including through the application of the waste hierarchy;
+                        </li>
+                        <li class="pt-2">pollution prevention and control (Art. 14);
+                        </li>
+                        <li class="pt-2">the protection and restoration of biodiversity and ecosystems (Art. 15).
+                        </li>
+                    </ul>
+                    <li class="pt-4"><strong>"Promoting sustainability"</strong> means a product (i.e. fund) promotes among other characteristics, environmental or social characteristics, or a combination of those characteristics, provided that the companies in which the investments of the fund are made, follow good governance practices.</li>
+                    <li class="pt-4"><strong>"Sustainability risk"</strong> means an environmental, social or governance event or condition that, if it occurs, could cause an actual or a potential material negative impact on the value of the investment.
+                    </li>
+                    <li class="pt-4"><strong>"Sustainability factors"</strong> mean environmental or social and employee matters, respect for human rights, anti-corruption and anti-bribery matters. This is what is or can be impacted by investment decisions.
+                    </li>
+                </ul>
+                <p class="text-left text-black font-semibold text-sm lg:text-base pt-12 lg:w-2/3">Transparency of sustainability risk policies and transparency of the integration of sustainability risks - article 3(1) and article 6 SFDR
+                </p> 
+                <p class="text-left text-black text-sm pt-6 lg:w-2/3">The Fund Manager does not integrate sustainability risks in its investment decision-making process for the following reasons:
+                </p> 
+                <ul class="list-disc pl-10 w-3/4">
+                    <li>the performance tools used by the Fund Manager to estimate returns of the Fund it manages do not take into account such risks but mainly economic and financial risks;
+                    </li>
+                    <li>since the portfolio companies in which the Fund it manages invest do not usually report on such risks, the Fund Manager is not in a position to assess and integrate such risks in its investment decision-making process;
+                    </li>
+                    <li>the Fund Manager is managing the Fund that intends to invest in companies across sectors like fintech, blockchain, deep tech, Cyber Security and machine learning / Artificial Intelligence, for which the returns should not be impacted by sustainability risks; and
+                    </li>
+                    <li>in view of the Fund Manager's size it is not intended to change the investment decision-making process of the Fund Manager to integrate such sustainability risks as this will be too costly and not relevant with respect to the Fund it manages.
+                    </li>
+                </ul>
+                <p class="text-left text-black font-semibold text-sm lg:text-base pt-12 lg:w-2/3">No consideration of adverse impacts of investment decisions on sustainability factors - article 4(1)(b) and article 7(2) SFDR
+                </p> 
+                <p class="text-left text-black text-sm pt-6 lg:w-2/3">SFDR requires fund managers such as the Fund Manager to provide a clear statement as to whether or not they consider the "principal adverse impacts" of investment decisions on sustainability factors.
+                </p>
+                <p class="text-left text-black text-sm pt-6 lg:w-2/3">In case such fund manager does not consider such principal adverse impacts, SFDR requires it to include clear reasons for why they do not do so, including, where relevant, information as to whether and when they intend to consider such adverse impacts.
+                </p>
+                <p class="text-left text-black text-sm pt-6 lg:w-2/3">The Fund Manager does not consider the adverse impacts of its investments decisions on sustainability factors at its own level and in respect of investments of the Fund in the manner prescribed by SFDR due to (i) the venture capital investment objectives of the investments that do not take sustainability into account, (ii) the lack of reliable and sufficiently available or accessible data to perform such impact measurement and to provide the mandatory reporting imposed by the regulatory technical standards in a consistent manner, and (iii) the underlying investments in seed and post seed stage portfolio companies are not generally required or able to report on such factors in the manner prescribed by SFDR.
+                </p>
+                <p class="text-left text-black text-sm pt-6 lg:w-2/3">The Fund Manager does not intend to consider principal adverse impacts of investment decisions on sustainability factors in the near future.
+                </p>
+                <p class="text-left text-black font-semibold text-sm lg:text-base pt-12 lg:w-2/3">Transparency of other financial products in pre-contractual disclosures and in periodic reports - article 7 of the Taxonomy Regulation
+                </p>
+                <p class="text-left text-black text-sm pt-6 lg:w-2/3">The investments underlying this financial product do not take into account the EU criteria for environmentally sustainable economic activities.
+                </p>
+            </div>
+          </section>
+
+      <footer class="w-screen bg-black px-4 py-4 lg:py-6 lg:px-12">
+        <div class="flex flex-row justify-between items-center">
+            <img src="./img/flogo.png" class="w-1/2 lg:w-1/6" />
+            <a href="https://www.linkedin.com/company/meta-change-capital/" target="_blank" rel="noopener noreferrer"><img src="./img/linkedin.png" /></a> 
+            <div class="flex flex-col justify-between items-start">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="text-sm text-white font-headlines relative before:absolute before:block before:w-full before:h-[2px] 
+                before:bottom-0 before:left-0 before:bg-white
+                before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                before:transition before:ease-in-out before:duration-300">SDFR Policy</a>
+                <a href="../index.html" class="text-sm text-white font-headlines relative before:absolute before:block before:w-full before:h-[2px] 
+                before:bottom-0 before:left-0 before:bg-white
+                before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                before:transition before:ease-in-out before:duration-300">About us</a>
+                <a href="../index.html" class="text-sm text-white font-headlines relative before:absolute before:block before:w-full before:h-[2px] 
+                before:bottom-0 before:left-0 before:bg-white
+                before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                before:transition before:ease-in-out before:duration-300">Get Funded</a>
+                <a href="../index.html" class="text-sm text-white font-headlines relative before:absolute before:block before:w-full before:h-[2px] 
+                before:bottom-0 before:left-0 before:bg-white
+                before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                before:transition before:ease-in-out before:duration-300">Contact</a>
+            </div>
+        </div>
+      </footer>
+    </body>
+    <script>
+        var mobileMenuButton = document.getElementById("mobileMenuButton");
+        mobileMenuButton.onclick = function() {
+                document.getElementById("sideMenuHideOnMobile").classList.toggle("-translate-y-full");
+                document.getElementById("sideMenuHideOnMobile").classList.toggle("mt-20");
+                document.getElementById("mobileMenuButtonClose").classList.toggle("hidden");
+                document.getElementById("mobileMenuButtonOpen").classList.toggle("hidden");
+            }
+            // Hide element when click outside nav
+        var theElementContainer = document.getElementsByTagName("nav")[0];
+        document.addEventListener('click', function(event) {
+            if (!theElementContainer.contains(event.target)) {
+                document.getElementById("sideMenuHideOnMobile").classList.add("-translate-y-full");
+                document.getElementById("sideMenuHideOnMobile").classList.remove("shadow");
+                document.getElementById("sideMenuHideOnMobile").classList.remove("hidden");
+                document.getElementById("sideMenuHideOnMobile").classList.add("mt-20");
+                document.getElementById("mobileMenuButtonClose").classList.add("hidden");
+            }
+        
+        });
+    
+        var menuLinks = document.querySelectorAll("a.navlink");
+        menuLinks.forEach((e, i) => {
+            e.addEventListener('click', () => {
+                document.getElementById("sideMenuHideOnMobile").classList.add("-translate-y-full");
+                document.getElementById("sideMenuHideOnMobile").classList.remove("shadow");
+                document.getElementById("mobileMenuButtonOpen").classList.remove("hidden");
+                document.getElementById("mobileMenuButtonClose").classList.add("hidden");
+            });
+        });
+    
+    </script>
+</html>
